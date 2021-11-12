@@ -31,28 +31,10 @@ const client = new ApolloClient({
   uri: 'https://api.github.com/graphql',
   cache: new InMemoryCache(),
   headers:{
-      Authorization: "Bearer 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"
+      Authorization: "Bearer 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"
   }
 });
 
-client
-  .query({
-    query: gql`
-      query {
-        viewer {
-            login
-            id
-            repositories {
-              totalCount
-            }
-            following {
-              totalCount
-            }
-            followers {
-              totalCount
-            }
-        }
-    }
-    `
-  })
-  .then(result => console.log(result));
+
+
+  
